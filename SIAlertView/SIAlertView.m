@@ -250,25 +250,25 @@ static SIAlertView *__si_alert_current_view;
 #pragma mark - SIAlert
 
 @implementation SIAlertView
-//+ (void)initialize
-//{
-//    if (self != [SIAlertView class])
-//        return;
-//
-//    SIAlertView *appearance = [self appearance];
-//    appearance.viewBackgroundColor = [UIColor whiteColor];
-//    appearance.titleColor = [UIColor blackColor];
-//    appearance.messageColor = [UIColor darkGrayColor];
-//    appearance.titleFont = [UIFont boldSystemFontOfSize:20];
-//    appearance.messageFont = [UIFont systemFontOfSize:16];
-//    appearance.buttonFont = [UIFont systemFontOfSize:[UIFont buttonFontSize]];
-//    appearance.buttonColor = [UIColor colorWithWhite:0.4 alpha:1];
-//    appearance.cancelButtonColor = [UIColor colorWithWhite:0.3 alpha:1];
-//    appearance.destructiveButtonColor = [UIColor whiteColor];
-//    appearance.cornerRadius = 2;
-//    appearance.shadowRadius = 8;
-//    appearance.maximumNumberOfLines = 5;
-//}
++ (void)initialize
+{
+    if (self != [SIAlertView class])
+        return;
+
+    SIAlertView *appearance = [self appearance];
+    appearance.viewBackgroundColor = [UIColor whiteColor];
+    appearance.titleColor = [UIColor blackColor];
+    appearance.messageColor = [UIColor darkGrayColor];
+    appearance.titleFont = [UIFont boldSystemFontOfSize:20];
+    appearance.messageFont = [UIFont systemFontOfSize:16];
+    appearance.buttonFont = [UIFont systemFontOfSize:[UIFont buttonFontSize]];
+    appearance.buttonColor = [UIColor whiteColor];
+    appearance.cancelButtonColor = [UIColor whiteColor];
+    appearance.destructiveButtonColor = [UIColor whiteColor];
+    appearance.cornerRadius = 2;
+    appearance.shadowRadius = 8;
+    appearance.maximumNumberOfLines = 5;
+}
 
 - (id)init
 {
@@ -1133,7 +1133,7 @@ static SIAlertView *__si_alert_current_view;
     [button setBackgroundImage:normalImage forState:UIControlStateNormal];
     [button setBackgroundImage:highlightedImage forState:UIControlStateHighlighted];
     [button addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchUpInside];
-
+    [button setBackgroundColor:[UIColor blackColor]];
     return button;
 }
 
